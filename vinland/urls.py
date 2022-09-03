@@ -17,14 +17,16 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
-
+from . import views
 urlpatterns = [
+    
     path('admin/', admin.site.urls),
-    path('', include('blood.urls')),
-    path('', include('face.urls')),
-    path('', include('low_boady.urls')),
-    path('', include('models.urls')),
-    path('', include('up_boady.urls'))
+    path('',views.home),
+    path('blood/', include('blood.urls')),
+    path('face/', include('face.urls')),
+    path('low_body/', include('low_boady.urls')),
+    path('models/', include('models.urls')),
+    path('up_body/', include('up_boady.urls'))
 ]
 
 

@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .forms import ParkkinsonForm
 from .classes.parkinson_detect import predict_parkinson
 
-def home(request):
+def parkinson(request):
     if request.method == 'POST':
         form = ParkkinsonForm(request.POST)
         if form.is_valid():
