@@ -6,11 +6,17 @@
 <h1>All Checkups realted to {{pagename}}</h1>
 
 {% for data in models %}
-
-    
-    <div class="models_card">
-        <a href="{{data.2}}" class="name_link_model">{{ data.0 }}</a>
-        <p class="summary">{{ data.1 }}</p>
+    <div class="models-card-wrapper">
+        <div class = "models-card-container">
+            <div class="models-card">
+                <div class="models-card-content">
+                    <h2>{{data.3}}</h2>
+                    <h3>{{data.0}}</h3>
+                    <p>{{data.1}}</p>
+                    <a href={{data.2}}> Go to Test </a> 
+                </div>
+            </div>
+        </div>
     </div>
 
 {% endfor %}
