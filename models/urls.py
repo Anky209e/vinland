@@ -9,6 +9,8 @@ urlpatterns = [
     path('diabetes/',views.diabetes, name='diabetes'),
     path('pcos/',views.pcos, name='pcos'),
     path('maleria/',views.maleria, name='maleria'),
+    path('pneumonia/',views.pneumonia, name='pneumonia'),
+
 
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
