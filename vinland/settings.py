@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'low_boady',
     'models',
     'up_boady',
+    'users',
 ]
 
 MIDDLEWARE = [

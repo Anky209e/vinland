@@ -27,7 +27,7 @@ urlpatterns = [
     path('low_body/', include('low_boady.urls')),
     path('models/', include('models.urls')),
     path('up_body/', include('up_boady.urls')),
-    path('user/', include('user.urls')),
+    path('user/', include('users.urls')),
 ]
 
 
