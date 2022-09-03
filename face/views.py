@@ -13,4 +13,4 @@ def home(request):
     glaucoma_data = ["Glaucoma Detection",glaucoma_sum,"/models/galucoma"]
 
     context = {"models":[park_data,brain_data,cat_data,glaucoma_data]}
-    return  render(request,"face.html",context)
+    return  render(request,"app_base.html",context)
