@@ -10,7 +10,7 @@ model = nn.Sequential(
     nn.Sigmoid()
 )
 # ['age','sex','cp','trtbps','chol']
-def predict_parkinson(ar):
+def predict_heartattack(ar):
     inputs = np.array(ar)
     inputs_tensor = torch.from_numpy(inputs.astype(np.float32))
 
@@ -34,4 +34,4 @@ def predict_parkinson(ar):
 
 if __name__=="__main__":
     ins = [0,1,0,1,1]
-    print(predict_parkinson(ins))
+    print(predict_heartattack(ins))
