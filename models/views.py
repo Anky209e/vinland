@@ -3,6 +3,10 @@ from django.shortcuts import render
 from .classes.heart_attack_detection import predict_heartattack
 from .forms import ParkkinsonForm, HeartattackForm,DiabetesForm,PcosForm
 from .classes.parkinson_detect import predict_parkinson
+from .classes.pcos_detection import predict_pcos
+from .classes.diabetes_predict import predict_diabetes
+
+
 
 def parkinson(request):
     if request.method == 'POST':
@@ -57,7 +61,7 @@ def heartattack(request):
 
 def diabetes(request):
     if request.method == 'POST':
-        form = HeartattackForm(request.POST)
+        form = DiabetesForm(request.POST)
         if form.is_valid():
             pregnancies= form.cleaned_data['pregnancies']
             glucose= form.cleaned_data['glucose']
@@ -69,7 +73,7 @@ def diabetes(request):
             age = form.cleaned_data['age']
 
             params = [pregnancies, glucose, bloodpressure, skin_thickness, insulin,bmi,diabetes_pedigree_function, age]
-            res = predict_heartattack(params)
+            res = predict_diabetes(params)
             print(res)
             acc = res['acc']
             result = res['result']
@@ -80,19 +84,19 @@ def diabetes(request):
                         'result':result,
                         'cures':cures}
     else:
-        form = HeartattackForm()
+        form = DiabetesForm()
         context = {'form':form}
-    return render(request, 'heartattack.html', context=context)
+    return render(request, 'diabetes.html', context=context)
 
 def pcos(request):
     if request.method == 'POST':
-        form = HeartattackForm(request.POST)
+        form = PcosForm(request.POST)
         if form.is_valid():
             beta_1_hcg_mIU_mL= form.cleaned_data['beta_1_hcg_mIU_mL']
             beta_2_hcg_mIU_mL= form.cleaned_data['beta_2_hcg_mIU_mL']
-            amh_ng_ml= form.cleaned_data['amh_ng_ml']
-            params = [beta_1_hcg_mIU_mL,beta_2_hcg_mIU_mL,amh_ng_ml]
-            res = predict_heartattack(params)
+            amh_ng_mL= form.cleaned_data['amh_ng_mL']
+            params = [beta_1_hcg_mIU_mL,beta_2_hcg_mIU_mL,amh_ng_mL]
+            res = predict_pcos(params)
             print(res)
             acc = res['acc']
             result = res['result']
@@ -103,9 +107,9 @@ def pcos(request):
                         'result':result,
                         'cures':cures}
     else:
-        form = HeartattackForm()
+        form = PcosForm()
         context = {'form':form}
-    return render(request, 'heartattack.html', context=context)
+    return render(request, 'pcos.html', context=context)
 
 
 # Create your views here.
