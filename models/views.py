@@ -34,6 +34,9 @@ def parkinson(request):
     return render(request, 'parkkinson.html', context=context)
 
 
+def home(request):
+
+    return render(request,"model_home.html")
 def heartattack(request):
     if request.method == 'POST':
         form = HeartattackForm(request.POST)

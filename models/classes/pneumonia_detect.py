@@ -60,8 +60,6 @@ class ResNet9(nn.Module):
 
       out = torch.relu(self.conv200a(out))
 
-      
-
       x = self.res200(out)
 
       out = torch.relu(self.conv300(out)+x)
@@ -73,10 +71,9 @@ class ResNet9(nn.Module):
       out = self.avgpool(out)#512x8x8
       out = self.avgpool(out)#512 4 4
       out = self.avgpool(out)#512 2 2
-      
+    
       out = self.flat(out)
       out = self.linear(out)
-
       return out
 
 
@@ -84,7 +81,6 @@ class ResNet9(nn.Module):
 
 def predict(path):
     img = Image.open(path).convert("RGB")
-    
     
     img = img.resize((64,64))
 
