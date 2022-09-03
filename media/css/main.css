@@ -136,7 +136,7 @@ body {
 }
 
 #menu.open {
-    height: 400px;
+    height: 600px;
     width: 100%;
     background: white;
     border-bottom: 1px solid black;
@@ -328,4 +328,7 @@ p {
     font-weight: 200;
     letter-spacing: 0.25em;
     text-align: center;
+}
+li:hover{
+    scale: 1.1;
 }
