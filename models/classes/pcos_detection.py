@@ -3,7 +3,6 @@ import torch.nn as nn
 import numpy as np
 
 model = nn.Sequential(
-    
     nn.Linear(3,7),
     nn.LeakyReLU(0.2),
     nn.Linear(7,1),
