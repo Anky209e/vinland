@@ -1,9 +1,16 @@
 {% extends "main.html" %}
 {% block title %}Registration{% endblock title %}
 {% block content %}
-    <form method="POST"> 
+    <form method="POST" class="register-login-form">
+        <h3>Signup Here</h3>
         {% csrf_token %}
-        {{form.as_p}}
-        <button type=sumbit>Submit</button>
+        <label>Username:</label>
+        {{form.username}}
+        <label>Password:</label>
+        {{form.password1}}
+        <label>Confirm Your Password:</label>
+        {{form.password2}}
+        <button class="button-submit-login" type=sumbit>Submit</button>
+        <strong><a href="{% url 'login' %}">Already Have an account?</a></strong>
     </form>
 {% endblock content %}

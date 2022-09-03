@@ -346,7 +346,82 @@ p {
     color: white;
     text-shadow: 1px 1px 2px rgb(243, 172, 223), 0 0 25px blue, 0 0 5px darkblue;
 }
-
 li:hover {
     scale: 1.1;
+}
+#id_password2{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: #d5d2f3;
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;   
+}
+
+.register-login-form {
+    height: 75vh;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.13);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 50px 35px;
+}
+
+.register-login-form * {
+    font-family: 'Poppins', sans-serif;
+    color: #403d64;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+.register-login-form input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: #d5d2f3;
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.register-login-form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+.register-login-form label {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.button-submit-login {
+    margin-top: 50px;
+    width: 100%;
+    background-color: #d5d2f3;
+    color: #403d64;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button-submit-login:hover{
+    background-color: #817acb;
+    color: #d5d2f3;
 }

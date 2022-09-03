@@ -1,9 +1,14 @@
 {% extends 'main.html' %}
 {% block title %} LogIn {% endblock title %}
 {% block content %}
-    <form method='POST'>
+    <form method='POST' class="register-login-form">
+        <h3>Login Here</h3>
         {% csrf_token %}
-        {{form}}
-        <button type='submit'>log in</button>
+        <label>Username:</label>
+        {{form.username}}
+        <label>Password:</label>
+        {{form.password}}
+        <button type='submit' class="button-submit-login">log in</button>
+        <strong><a href="{% url 'register' %}">Don't Have an Account?</a></strong>
     </form>
 {% endblock content%}
