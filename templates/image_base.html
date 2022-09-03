@@ -3,14 +3,21 @@
 {% block title %}{{name}}{% endblock title %}
 
 {% block content %}
-<br>
-<br>
+<div class="heading1">
+    <h1>Upload an Image</h1>
+</div>
 {% if image_form %}
-    <form method="POST" enctype="multipart/form-data" class="cnn-form" >\
+    <form method="POST" enctype="multipart/form-data" class="cnn-form" >
         {% csrf_token %}
-        {{ image_form }}
-        
-        <input type="submit" value="Upload" class="submit">
+        <div class="image-uploader-wrapper">
+            <div class="image-uploader-file-upload">
+                {% for f in image_form %}
+                {{f}}
+                {% endfor %}
+                <i class="fa fa-arrow-up"></i>
+            </div>
+        </div>
+        <button type="submit" class="image-uploader-submit-button">Submit</button>
     </form>
     <br>
     <br>
