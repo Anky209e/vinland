@@ -50,7 +50,7 @@ def crop_brain_contour(image):
     return new_image
 
 # Parsing image path
-def check_tumor(IMG_PATH,THRESHOLD):
+def check_tumor(IMG_PATH,THRESHOLD=0.5):
 
 # pre-processing image 
     new_image = crop_brain_contour(IMG_PATH)
@@ -59,7 +59,7 @@ def check_tumor(IMG_PATH,THRESHOLD):
 
     # predicting output
     out = best_model.predict(model_image)
-    prob = out[0][0]*10
+    prob = round(out[0][0],2)*100
 
     # final conditions
     if prob >= THRESHOLD:
@@ -71,4 +71,4 @@ def check_tumor(IMG_PATH,THRESHOLD):
         print("**** No Tumor Detection ****")
         status = "No Tumor Detected"
         print("**** Probablity:{} ****".format(prob*100))
-    return status,prob
+    return [(status,prob)]

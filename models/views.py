@@ -162,3 +162,29 @@ def pneumonia(request):
         image_form = ImageForm()
 
         return render(request, "image_base.html", {"image_form": image_form, "name":name})
+
+
+
+def brain_tumor(request):
+    name = "Brain Tumor"
+    html_path = "cnn/brain_tumor.html"
+
+    if request.method =="POST":        
+        form = ImageForm(request.POST, request.FILES)
+        try:
+            if form.is_valid():
+                form.save()
+        except:
+            pass
+
+        img_path ="./media/model_images/" + str(request.FILES["image_field"]).replace(" ", "_")
+        
+        from .classes.tumor_detect import check_tumor
+        result = check_tumor(img_path)
+
+
+        return render(request, "image_base.html", {"image_form": None, "name":name, "list":result})
+    else:
+        image_form = ImageForm()
+
+        return render(request, "image_base.html", {"image_form": image_form, "name":name})
