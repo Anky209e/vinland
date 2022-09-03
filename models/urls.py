@@ -11,6 +11,7 @@ urlpatterns = [
     path('maleria/',views.maleria, name='maleria'),
     path('pneumonia/',views.pneumonia, name='pneumonia'),
     path('brain_tumor/', views.brain_tumor, name='brain_tumor'),
+    path('covid19/',views.covid19,name='covid19')
 
 
 ]

@@ -188,3 +188,27 @@ def brain_tumor(request):
         image_form = ImageForm()
 
         return render(request, "image_base.html", {"image_form": image_form, "name":name})
+
+def covid19(request):
+    name = "Covid19"
+    html_path = "cnn/pneumonia.html"
+
+    if request.method =="POST":        
+        form = ImageForm(request.POST, request.FILES)
+        try:
+            if form.is_valid():
+                form.save()
+        except:
+            pass
+
+        img_path ="./media/model_images/" + str(request.FILES["image_field"]).replace(" ", "_")
+        
+        from .classes.covid_detect import predict
+        result = predict(img_path)
+
+
+        return render(request, "image_base.html", {"image_form": None, "name":name, "list":result})
+    else:
+        image_form = ImageForm()
+
+        return render(request, "image_base.html", {"image_form": image_form, "name":name})
