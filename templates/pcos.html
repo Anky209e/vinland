@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+
+{% block title %} PCOS{% endblock title %}
+
+{% block content %}
+<h1>PCOS Detection</h1>
+
+<form method="POST" >
+    {% csrf_token %}
+    {% for f in form %}
+    <label> {{f.label}} </label>
+    {{f}}
+    {% endfor %}
+    <button type='submit'>submit</button>
+    <p>{{acc}}</p>
+    <p>{{result}}</p>
+    <p>{{cures}}</p>
+</form>
+
+{% endblock content %}

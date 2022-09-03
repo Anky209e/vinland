@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from .classes.heart_attack_detection import predict_heartattack
-from .forms import ParkkinsonForm, HeartattackForm
+from .forms import ParkkinsonForm, HeartattackForm,DiabetesForm,PcosForm
 from .classes.parkinson_detect import predict_parkinson
 
 def parkinson(request):
@@ -54,5 +54,58 @@ def heartattack(request):
         form = HeartattackForm()
         context = {'form':form}
     return render(request, 'heartattack.html', context=context)
+
+def diabetes(request):
+    if request.method == 'POST':
+        form = HeartattackForm(request.POST)
+        if form.is_valid():
+            pregnancies= form.cleaned_data['pregnancies']
+            glucose= form.cleaned_data['glucose']
+            bloodpressure = form.cleaned_data['bloodpressure']
+            skin_thickness = form.cleaned_data['skin_thickness']
+            insulin = form.cleaned_data['insulin']
+            bmi = form.cleaned_data['bmi']
+            diabetes_pedigree_function=form.cleaned_data['diabetes_pedigree_function']
+            age = form.cleaned_data['age']
+
+            params = [pregnancies, glucose, bloodpressure, skin_thickness, insulin,bmi,diabetes_pedigree_function, age]
+            res = predict_heartattack(params)
+            print(res)
+            acc = res['acc']
+            result = res['result']
+            cures = res['cures']
+
+            context = {'form':form,
+                        'acc':acc,
+                        'result':result,
+                        'cures':cures}
+    else:
+        form = HeartattackForm()
+        context = {'form':form}
+    return render(request, 'heartattack.html', context=context)
+
+def pcos(request):
+    if request.method == 'POST':
+        form = HeartattackForm(request.POST)
+        if form.is_valid():
+            beta_1_hcg_mIU_mL= form.cleaned_data['beta_1_hcg_mIU_mL']
+            beta_2_hcg_mIU_mL= form.cleaned_data['beta_2_hcg_mIU_mL']
+            amh_ng_ml= form.cleaned_data['amh_ng_ml']
+            params = [beta_1_hcg_mIU_mL,beta_2_hcg_mIU_mL,amh_ng_ml]
+            res = predict_heartattack(params)
+            print(res)
+            acc = res['acc']
+            result = res['result']
+            cures = res['cures']
+
+            context = {'form':form,
+                        'acc':acc,
+                        'result':result,
+                        'cures':cures}
+    else:
+        form = HeartattackForm()
+        context = {'form':form}
+    return render(request, 'heartattack.html', context=context)
+
 
 # Create your views here.

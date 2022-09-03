@@ -17,6 +17,24 @@ class HeartattackForm(forms.Form):
     trtbps = forms.FloatField()
     cholestrol = forms.FloatField()
     
+class DiabetesForm(forms.Form):
+    pregnancies = forms.IntegerField()
+    glucose = forms.IntegerField()
+    bloodpressure = forms.IntegerField()
+    skin_thickness = forms.IntegerField()
+    insulin= forms.IntegerField()
+    bmi = forms.IntegerField()
+    diabetes_pedigree_function  = forms.IntegerField()
+    age = forms.IntegerField()
+
+
+class PcosForm(forms.Form):
+    beta_1_hcg_mIU_mL = forms.FloatField()
+    beta_2_hcg_mIU_mL = forms.FloatField()
+    amh_ng_mL = forms.FloatField()
+
+
+
 
 class MyUserCreationForm(UserCreationForm):
     class Meta:
