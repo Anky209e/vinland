@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .forms import ImageForm
 from .classes.heart_attack_detection import predict_heartattack
 from .forms import ParkkinsonForm, HeartattackForm,DiabetesForm,PcosForm
 from .classes.parkinson_detect import predict_parkinson
@@ -115,4 +115,26 @@ def pcos(request):
     return render(request, 'pcos.html', context=context)
 
 
-# Create your views here.
+def maleria(request):
+    name = "Maleria"
+    html_path = "cnn/maleria.html"
+
+    if request.method =="POST":        
+        form = ImageForm(request.POST, request.FILES)
+        try:
+            if form.is_valid():
+                form.save()
+        except:
+            pass
+
+        img_path ="./media/model_images/" + str(request.FILES["image_field"]).replace(" ", "_")
+        
+        from .classes.maleria import predict_maleria
+        result = predict_maleria(img_path)
+
+
+        return render(request, "image_base.html", {"image_form": None, "name":name, "list":result})
+    else:
+        image_form = ImageForm()
+
+        return render(request, "image_base.html", {"image_form": image_form, "name":name})
