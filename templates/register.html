@@ -1,6 +1,11 @@
 {% extends "main.html" %}
 {% block title %}Registration{% endblock title %}
 {% block content %}
+    <div class="register-login-container">
+        <div class="background">
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
     <form method="POST" class="register-login-form">
         <h3>Signup Here</h3>
         {% csrf_token %}
@@ -13,4 +18,5 @@
         <button class="button-submit-login" type=sumbit>Submit</button>
         <strong><a href="{% url 'login' %}">Already Have an account?</a></strong>
     </form>
+    </div>
 {% endblock content %}
