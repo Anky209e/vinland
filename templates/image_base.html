@@ -4,7 +4,11 @@
 
 {% block content %}
 <div class="heading1">
+    {%if image_form %}
     <h1>Upload an Image</h1>
+    {% else %}
+    <h1>Showing The Results</h1>
+    {% endif %}
 </div>
 {% if image_form %}
     <form method="POST" enctype="multipart/form-data" class="cnn-form" >
@@ -26,14 +30,22 @@
 
 {% endif %}
 
-{% for class,prob in list %}
-
-<div class="result">
-    <p>{{class}}</p>
-    <p>{{prob}}%</p>
+<div class="report-card-bg" >
+    <div class="report-card-wrapper">
+        <div class="report-card-container">
+            <div class="report-card">
+                <div class="report-content">
+                    <img src="/media/assets/logo.png" alt="" height="80px" width="110px">
+                    {% for class,prob in list %}
+                    <h3>{{class}}</h3>
+                    <input  for="" placeholder="{{prob}}" class="place" disabled>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-{% endfor %}
 
 
 {% endblock content %}

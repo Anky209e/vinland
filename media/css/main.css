@@ -361,6 +361,8 @@ li:hover {
     font-weight: 300;   
 }
 
+/* register and login page */
+
 .register-login-form {
     height: 75vh;
     width: 400px;
@@ -425,6 +427,8 @@ li:hover {
     background-color: #817acb;
     color: #d5d2f3;
 }
+
+/* For face/upperbody/lowerbody/face/blood models */
 
 .background {
     width: 430px;
@@ -596,8 +600,122 @@ li:hover {
 }
 
 .heading1 {
-    color: white;
+    color: rgb(37, 72, 180);
     text-align: center;
     margin-top: 50px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Report Card CSS */
+
+.report-card-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.report-card-container{
+    position: relative;
+    display: flex;
+    flex-direction: row ;
+    
+    
+    /* justify-content: center; */
+    align-items: center;
+    max-width: 1200px;
+    /* flex-wrap: wrap; */
+    z-index: 1;
+}
+.report-card-container:hover{
+    scale: 1.07;
+    transition: 1s ease;
+}
+.report-card-container .reort-card{
+    position: relative;
+    width: 320px;
+    height: 440px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+.report-container .report-card .report-content{
+    padding: 20px;
+    text-align: center;
+    /* transform: translateY(100px);
+    opacity: 0; */
+    transition: 0.5s;
+}
+.report-card-container .report-card :hover .report-card-content{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.report-card-container .report-card .report-card-content h2{
+    position: absolute;
+    top: -40px;
+    right: 30px;
+    font-size: 8em;
+    color: #2892ee;
+    pointer-events:none;
+}
+.report-card-container .report-card .report-card-content h3{
+    font-size: 1.8em;
+    color: #d22c73;
+    z-index: 1;
+}
+.report-card-container .report-card .report-card-content p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    color: #403d64;
+    font-weight: 300;
+}
+.report-card-container .report-card .report-content {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #fff;
+    color: #403d64;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+} 
+.place{
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.report-card-bg{
+    min-height: 100vh;
+    background: #f1f0ff;
+}
+.report-card-bg::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(#7feaae,#cdee68);
+    clip-path: circle(30% at right 70%);
+}
+.report-card-bg::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(#5daaea,#2edf8f);
+    clip-path: circle(20% at 10% 10%);
 }
