@@ -4,10 +4,12 @@ from django.shortcuts import render
 def home(request):
     park_sum = """Parkinson’s disease is a brain disorder that causes unintended or uncontrollable movements, such as shaking, stiffness, and difficulty with balance and coordination."""
     
-    brain_sum = """A brain tumor is an abnormal growth or mass of cells in or around your brain."""
+    brain_sum = """A brain tumor is an abnormal growth or mass of cells in or around your brain. Brain tumors can be malignant (cancerous) or benign (noncancerous)."""
     
-    cat_sum = """Summary for Cataract"""
-    glaucoma_sum = """Summary for galucoma"""
+    cat_sum = """Cataract is a dense, cloudy area that forms in the lens of the eye. A cataract begins when proteins in the eye form clumps that prevent the lens from 
+    sending clear images to the retina."""
+    
+    glaucoma_sum = """Glaucoma is a disease that damages your eye’s optic nerve. It usually happens when fluid builds up in the front part of your eye. That extra fluid increases the pressure in your eye, damaging the optic nerve."""
     
     park_data = ["Parkinson Disease",park_sum,"/models/parkinson","01"]
     brain_data = ["Brain Tumor",brain_sum,"/models/brain_tumor","02"]

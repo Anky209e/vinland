@@ -2,13 +2,13 @@ from django.shortcuts import render
 
 # Create your views here.
 def home(request):
-    heart_sum = """"""
-    lung_cancer_sum = """Summary for Lung Cancer"""
+    heart_sum = """A heart attack occurs when the flow of blood to the heart is severely reduced or blocked"""
+    lung_cancer_sum = """Lung cancer is cancer that forms in tissues of the lung, usually in the cells that line the air passages."""
     
-    skin_sum = """Summary for S"""
-    covid_sum = """Summary for COVID"""
-    pneumonia_sum = """Summary for pneumonia"""
-    liver_sum = """Summary for Liver Patient"""
+    skin_sum = """Acne, Eczema, Shingles(Herpes Zoster),Hives, Sunburn"""
+    covid_sum = """COVID-19  causes lung complications such as pneumonia and, in the most severe cases, acute respiratory distress syndrome, or ARDS."""
+    pneumonia_sum = """Pneumonia is a form of acute respiratory infection that affects the lungs"""
+    liver_sum = """Detects any type of liver infection and unsual behaviour"""
 
     
     heart_data = ["Heart Attack",heart_sum,"/models/heartattack"]
