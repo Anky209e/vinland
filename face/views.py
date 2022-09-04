@@ -2,8 +2,10 @@ from django.shortcuts import render
 
 # Create your views here.
 def home(request):
-    park_sum = """Summary for parkinson"""
-    brain_sum = """Summary for brain tumor"""
+    park_sum = """Parkinson’s disease is a brain disorder that causes unintended or uncontrollable movements, such as shaking, stiffness, and difficulty with balance and coordination."""
+    
+    brain_sum = """A brain tumor is an abnormal growth or mass of cells in or around your brain."""
+    
     cat_sum = """Summary for Cataract"""
     glaucoma_sum = """Summary for galucoma"""
     
