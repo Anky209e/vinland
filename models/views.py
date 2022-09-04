@@ -261,3 +261,27 @@ def eye_defect(request):
         image_form = ImageForm()
 
         return render(request, "image_base.html", {"image_form": image_form, "name":name})
+
+def lung_cancer(request):
+    name = "Lung Cancer"
+    html_path = "cnn/Lung_cancer.html"
+
+    if request.method =="POST":        
+        form = ImageForm(request.POST, request.FILES)
+        try:
+            if form.is_valid():
+                form.save()
+        except:
+            pass
+
+        img_path ="./media/model_images/" + str(request.FILES["image_field"]).replace(" ", "_")
+        
+        from .classes.lung_cancer import predict
+        result = predict(img_path)
+
+
+        return render(request, "image_base.html", {"image_form": None, "name":name, "list":result})
+    else:
+        image_form = ImageForm()
+
+        return render(request, "image_base.html", {"image_form": image_form, "name":name})

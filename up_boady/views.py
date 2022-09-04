@@ -12,7 +12,7 @@ def home(request):
 
     
     heart_data = ["Heart Attack",heart_sum,"/models/heartattack"]
-    brain_data = ["Lung Cancer",lung_cancer_sum,"/models/lung"]
+    lung_data = ["Lung Cancer",lung_cancer_sum,"/models/lung_cancer"]
     brest_data = ["Breast Cancer",brest_sum,"/models/brest_cancer"]
     skin_data = ["Skin Disease",skin_sum,"/models/skin_disease"]
     covid_data = ["COVID",covid_sum,"/models/covid19"]
@@ -21,5 +21,5 @@ def home(request):
 
 
 
-    context = {"models":[heart_data,brain_data,brest_data,skin_data,covid_data,pneu_data,liver_data]}
+    context = {"models":[heart_data,lung_data,brest_data,skin_data,covid_data,pneu_data,liver_data]}
     return  render(request,"app_base.html",context)

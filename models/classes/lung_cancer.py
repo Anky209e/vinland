@@ -89,7 +89,7 @@ def predict(path):
     img = img.resize((64,64))
 
     pred_model = ResNet9(3,2)
-    pred_model.load_state_dict(torch.load("weights/lung1.pth", map_location=torch.device("cpu")))
+    pred_model.load_state_dict(torch.load("weights/lung_1.pth", map_location=torch.device("cpu")))
     
     img_cls = ['Normal', 'Cancer']
 
