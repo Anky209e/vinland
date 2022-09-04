@@ -2,10 +2,10 @@ from django.shortcuts import render
 
 # Create your views here.
 def home(request):
-    heart_sum = """Summary for Heart Attack"""
+    heart_sum = """"""
     lung_cancer_sum = """Summary for Lung Cancer"""
     
-    skin_sum = """Summary for Skin Disease"""
+    skin_sum = """Summary for S"""
     covid_sum = """Summary for COVID"""
     pneumonia_sum = """Summary for pneumonia"""
     liver_sum = """Summary for Liver Patient"""
