@@ -300,7 +300,6 @@ def liver_defect(request):
 
             params = [Total_Bilirubin,Direct_Bilirubin,Alkaline_Phosphotase,Alamine_Aminotransferase,Aspartate_Aminotransferase,Total_Protiens]
             res = predict_liver_failure(params)
-            print(res)
             acc = res['acc']
             result = res['result']
             cures = res['cures']
