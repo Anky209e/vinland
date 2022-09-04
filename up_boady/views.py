@@ -14,10 +14,10 @@ def home(request):
     heart_data = ["Heart Attack",heart_sum,"/models/heartattack"]
     brain_data = ["Lung Cancer",lung_cancer_sum,"/models/lung"]
     brest_data = ["Breast Cancer",brest_sum,"/models/brest_cancer"]
-    skin_data = ["Skin Disease",skin_sum,"/models/skin"]
-    covid_data = ["COVID",covid_sum,"/models/covid"]
+    skin_data = ["Skin Disease",skin_sum,"/models/skin_disease"]
+    covid_data = ["COVID",covid_sum,"/models/covid19"]
     pneu_data = ["Pneumonia Detection",pneumonia_sum,"/models/pneumonia"]
-    liver_data = ["Liver Patient",liver_sum,"/models/liver"]
+    liver_data = ["Liver Patient",liver_sum,"/models/liver_defect"]
 
 
 

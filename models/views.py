@@ -237,3 +237,27 @@ def skin_disease(request):
         image_form = ImageForm()
 
         return render(request, "image_base.html", {"image_form": image_form, "name":name})
+
+def eye_defect(request):
+    name = "Eye defect"
+    html_path = "cnn/eye_defect.html"
+
+    if request.method =="POST":        
+        form = ImageForm(request.POST, request.FILES)
+        try:
+            if form.is_valid():
+                form.save()
+        except:
+            pass
+
+        img_path ="./media/model_images/" + str(request.FILES["image_field"]).replace(" ", "_")
+        
+        from .classes.eye_detect import predict
+        result = predict(img_path)
+
+
+        return render(request, "image_base.html", {"image_form": None, "name":name, "list":result})
+    else:
+        image_form = ImageForm()
+
+        return render(request, "image_base.html", {"image_form": image_form, "name":name})

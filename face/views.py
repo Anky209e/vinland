@@ -8,8 +8,8 @@ def home(request):
     glaucoma_sum = """Summary for galucoma"""
     
     park_data = ["Parkinson Disease",park_sum,"/models/parkinson","01"]
-    brain_data = ["Brain Tumor",brain_sum,"/models/brain","02"]
-    cat_data = ["Cataract Detection",cat_sum,"/models/cataract","03"]
+    brain_data = ["Brain Tumor",brain_sum,"/models/brain_tumor","02"]
+    cat_data = ["Cataract Detection",cat_sum,"/models/eye_defect","03"]
     glaucoma_data = ["Glaucoma Detection",glaucoma_sum,"/models/galucoma","04"]
 
     context = {"models":[park_data,brain_data,cat_data,glaucoma_data],"pagename":"Head"}
