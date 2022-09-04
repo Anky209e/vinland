@@ -23,7 +23,7 @@
 - Brain Tumor
 - Eye
 - Cataract
-- Skin DIsease
+- Skin Disease
 
 ## Personal User Experience
 - Handles user authentication.
