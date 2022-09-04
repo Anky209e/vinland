@@ -233,6 +233,11 @@ p {
     display: inline-block;
     right: 650px;
 }
+.btn a{
+    text-decoration: none;
+    font-size: larger;
+    color: white;
+}
 
 .btn-15 {
     border: 2px solid white;
@@ -307,6 +312,9 @@ p {
 
 .textup {
     margin-bottom: 100px;
+}
+.textup span{
+    color:#6c63ff;
 }
 
 .hero3 {
