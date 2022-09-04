@@ -297,6 +297,7 @@ p {
 }
 .hero span{
     color:#6c63ff;
+    /* font-family: 'Petit Formal Script', cursive; */
 }
 .hero2 {
     display: flex;
@@ -315,6 +316,7 @@ p {
 }
 .textup span{
     color:#6c63ff;
+    
 }
 
 .hero3 {
@@ -556,6 +558,16 @@ li:hover {
     text-decoration: none;
     font-weight: 500;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.head2{
+    font-size: 30px;
+    font-family: 'Titillium Web', sans-serif;
+}
+.head3{}
+.para{
+    font-size: 20px;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 
