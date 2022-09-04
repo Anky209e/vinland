@@ -14,7 +14,8 @@ urlpatterns = [
     path('covid19/',views.covid19,name='covid19'),
     path('skin_disease/',views.skin_disease, name="skin_disease"),
     path('eye_defect/',views.eye_defect, name='eye_defect'),
-    path('lung_cancer/',views.lung_cancer, name='lung_cancer')
+    path('lung_cancer/',views.lung_cancer, name='lung_cancer'),
+    path('liver_defect/',views.liver_defect,name='liver_defect'),
 
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

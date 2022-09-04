@@ -1,10 +1,11 @@
 from django.shortcuts import render
 from .forms import ImageForm
 from .classes.heart_attack_detection import predict_heartattack
-from .forms import ParkkinsonForm, HeartattackForm,DiabetesForm,PcosForm
+from .forms import ParkkinsonForm, HeartattackForm,DiabetesForm,PcosForm,LiverForm
 from .classes.parkinson_detect import predict_parkinson
 from .classes.pcos_detection import predict_pcos
 from .classes.diabetes_predict import predict_diabetes
+from .classes.liver_patient import predict_liver_failure
 
 
 
@@ -285,3 +286,30 @@ def lung_cancer(request):
         image_form = ImageForm()
 
         return render(request, "image_base.html", {"image_form": image_form, "name":name})
+
+def liver_defect(request):
+    if request.method == 'POST':
+        form = LiverForm(request.POST)
+        if form.is_valid():
+            Total_Bilirubin = form.cleaned_data['Total_Bilirubin']
+            Direct_Bilirubin = form.cleaned_data['Direct_Bilirubin'] 
+            Alkaline_Phosphotase = form.cleaned_data['Alkaline_Phosphotase'] 
+            Alamine_Aminotransferase = form.cleaned_data['Alamine_Aminotransferase'] 
+            Aspartate_Aminotransferase= form.cleaned_data['Aspartate_Aminotransferase']    
+            Total_Protiens= form.cleaned_data['Total_Protiens']    
+
+            params = [Total_Bilirubin,Direct_Bilirubin,Alkaline_Phosphotase,Alamine_Aminotransferase,Aspartate_Aminotransferase,Total_Protiens]
+            res = predict_liver_failure(params)
+            print(res)
+            acc = res['acc']
+            result = res['result']
+            cures = res['cures']
+
+            context = {'form':form,
+                        'acc':acc,
+                        'result':result,
+                        'cures':cures}
+    else:
+        form = LiverForm()
+        context = {'form':form}
+    return render(request, 'diabetes.html', context=context)

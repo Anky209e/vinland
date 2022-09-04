@@ -36,7 +36,14 @@ class PcosForm(forms.Form):
     amh_ng_mL = forms.FloatField()
 
 
-
+class LiverForm(forms.Form):
+    Total_Bilirubin = forms.FloatField()
+    Direct_Bilirubin = forms.FloatField()
+    Alkaline_Phosphotase = forms.FloatField()
+    Alamine_Aminotransferase = forms.FloatField()
+    Aspartate_Aminotransferase= forms.FloatField()
+    Total_Protiens= forms.FloatField()
+    
 
 class MyUserCreationForm(UserCreationForm):
     class Meta:
