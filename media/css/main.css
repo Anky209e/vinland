@@ -731,3 +731,16 @@ li:hover {
     background:linear-gradient(#5daaea,#2edf8f);
     clip-path: circle(20% at 10% 10%);
 }
+
+/* template */
+.formgroup-table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.input-labels {
+    padding: 10px;
+}
