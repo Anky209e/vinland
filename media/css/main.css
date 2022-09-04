@@ -15,7 +15,7 @@ body {
 
 .navT {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     -webkit-transition: all 0.25s;
     z-index: 111;
@@ -26,6 +26,10 @@ body {
     left: 0;
     top: 0;
     position: fixed;
+}
+
+.sign {
+    float:right;
 }
 
 .navT .icon {
