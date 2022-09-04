@@ -42,10 +42,10 @@ Theme: HealthCare
 ## Team V1nland
 ```
     - Team no: 33
-    - github.com/anky209e  Ankit Kumar
-    - github.com/krrishexe Krish Yadav
-    - github.com/Gaurav065 Gaurav Patel
-    - github.com/swaksh-war SwakshWar Ghosh
-    - github.com/prakriti-01 Prakriti Verma
+    - github.com/anky209e  Ankit Kumar -8210
+    - github.com/krrishexe Krish Yadav -8209
+    - github.com/Gaurav065 Gaurav Patel-8208
+    - github.com/swaksh-war SwakshWar Ghosh-8207
+    - github.com/prakriti-01 Prakriti Verma-8206
 
 ```
