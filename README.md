@@ -4,8 +4,12 @@
 
 ## A fully personalized django based full body checkup webapp with 13 ML models *Deployed with GCP*
 
+Theme: HealthCare
+
+*All models were trained from scratch during hackathon*
+
 ## Tech STack Used
-- DJango
+- DJango (python)
 - Tensorflow
 - Pytorch
 - MongoDB
@@ -35,9 +39,13 @@
 - Advance user queries handling
 - Re-training pipeline
 
-## Team Members
-- github.com/anky209e
-- github.com/krrishexe
-- github.com/Gaurav065
-- github.com/swaksh-war
-- github.com/prakriti-01
+## Team V1nland
+```
+    - Team no: 33
+    - github.com/anky209e  Ankit Kumar
+    - github.com/krrishexe Krish Yadav
+    - github.com/Gaurav065 Gaurav Patel
+    - github.com/swaksh-war SwakshWar Ghosh
+    - github.com/prakriti-01 Prakriti Verma
+
+```
