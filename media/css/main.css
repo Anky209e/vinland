@@ -15,7 +15,7 @@ body {
 
 .navT {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     -webkit-transition: all 0.25s;
     z-index: 111;
@@ -28,13 +28,23 @@ body {
     position: fixed;
 }
 
+.sign {
+    float:right;
+    
+}
+.sign a{
+    text-decoration: none;
+    color: #817acb;
+    font-size: 22px;
+}
+
 .navT .icon {
     -webkit-transition: all 0.25s;
-    position: absolute;
+    position: relative;
     width: 30px;
     height: 1px;
-    left: 15px;
-    top: 30px;
+    left: 0px;
+    top: 0px;
     background-color: black;
 }
 
@@ -168,7 +178,7 @@ input[type=text] {
     text-transform: uppercase;
     margin-top: 85px;
     margin-left: 10px;
-    color: #6c63ff;
+    color: black;
 }
 
 .content h2 {
@@ -222,6 +232,11 @@ p {
     position: relative;
     display: inline-block;
     right: 650px;
+}
+.btn a{
+    text-decoration: none;
+    font-size: larger;
+    color: white;
 }
 
 .btn-15 {
@@ -280,7 +295,9 @@ p {
     text-align: right;
     margin-bottom: 20px;
 }
-
+.hero span{
+    color:#6c63ff;
+}
 .hero2 {
     display: flex;
     align-items: center;
@@ -295,6 +312,9 @@ p {
 
 .textup {
     margin-bottom: 100px;
+}
+.textup span{
+    color:#6c63ff;
 }
 
 .hero3 {
@@ -718,4 +738,17 @@ li:hover {
     height: 100%;
     background:linear-gradient(#5daaea,#2edf8f);
     clip-path: circle(20% at 10% 10%);
+}
+
+/* template */
+.formgroup-table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.input-labels {
+    padding: 10px;
 }

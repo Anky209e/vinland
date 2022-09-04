@@ -5,16 +5,23 @@
 {% block content %}
 <h1>Heartattack Detection</h1>
 
-<form method="POST" >
-    {% csrf_token %}
-    {% for f in form %}
-    <label> {{f.label}} </label>
-    {{f}}
-    {% endfor %}
-    <button type='submit'>submit</button>
-    <p>{{acc}}</p>
-    <p>{{result}}</p>
-    <p>{{cures}}</p>
-</form>
+<form method='POST'>
+    <div class="formgroup-table">
+       {% csrf_token %}
+       {% for f in form %}
+       <label class='input-labels'  >{{f.label}}
+         
+         {{f}}
+       </label>
+       {% endfor %}
+    
+      <button type='submit'>submit</button>
+    
+      <h3>{{acc}}</h3>
+       <h3>{{result}}</h3>
+       <h3>{{cures}}</h3>
+     </div>
+     
+    </form>
 
 {% endblock content %}
