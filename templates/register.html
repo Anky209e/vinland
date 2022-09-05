@@ -8,14 +8,14 @@
         </div>
     <form method="POST" class="register-login-form">
         <h3>Signup Here</h3>
-        {% csrf_token %}
+        {% csrf_token %} 
         <label>Username:</label>
-        {{form.username}}
+        {{form.username}} <br>
         <label>Password:</label>
-        {{form.password1}}
+        {{form.password1}} <br>
         <label>Confirm Your Password:</label>
-        {{form.password2}}
-        <button class="button-submit-login" type=sumbit>Submit</button>
+        {{form.password2}} <br>
+        <button class="button-submit-login" type=sumbit>Submit</button> <br>
         <strong><a href="{% url 'login' %}">Already Have an account?</a></strong>
     </form>
     </div>

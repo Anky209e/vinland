@@ -32,10 +32,10 @@ body {
     float:right;
     
 }
-.sign a{
-    text-decoration: none;
-    color: #817acb;
-    font-size: 22px;
+.sign img{
+
+    height:60px;
+    width: 60px;
 }
 
 .navT .icon {
@@ -361,23 +361,11 @@ p {
 li:hover {
     scale: 1.1;
 }
-#id_password2{
-    display: block;
-    height: 50px;
-    width: 100%;
-    background-color: #d5d2f3;
-    border-radius: 3px;
-    padding: 0 10px;
-    margin-top: 8px;
-    font-size: 14px;
-    font-weight: 300;   
-}
-
 /* register and login page */
 
 .register-login-form {
     height: 75vh;
-    width: 400px;
+    width: 430px;
     background-color: rgba(255, 255, 255, 0.13);
     position: absolute;
     transform: translate(-50%, -50%);
@@ -391,6 +379,7 @@ li:hover {
 }
 
 .register-login-form * {
+    align-items: left;
     font-family: 'Poppins', sans-serif;
     color: #403d64;
     letter-spacing: 0.5px;
@@ -401,7 +390,7 @@ li:hover {
 .register-login-form input {
     display: block;
     height: 50px;
-    width: 100%;
+    width: 96%;
     background-color: #d5d2f3;
     border-radius: 3px;
     padding: 0 10px;
@@ -418,13 +407,16 @@ li:hover {
 }
 
 .register-login-form label {
+    padding-right: 10px;
     display: block;
     margin-top: 30px;
     font-size: 16px;
     font-weight: 500;
 }
 
+
 .button-submit-login {
+    display: block;
     margin-top: 50px;
     width: 100%;
     background-color: #d5d2f3;
@@ -472,6 +464,8 @@ li:hover {
     right: -80px;
     bottom: -80px;
 }
+
+/* For app_base.html */
 
 .models-card-wrapper{
     display: flex;
