@@ -1,0 +1,10 @@
+{% extends 'main.html' %}
+{% block content %}
+    <img src='{{request.user.avatar.url}}' height=100px width=100px>
+    <form method="POST" enctype="multipart/form-data" >
+        {% csrf_token %}
+    {{form.as_p}}
+    <button type='submit'>update</button>
+    </form>
+    <a href="{% url 'logout' %}" >Logout</a>
+{% endblock %}
