@@ -1,0 +1,33 @@
+<div id="container">
+    <div class="navT">
+        <div class="icon"></div>
+        <a href="/"><img src="/media/assets/logo.png" alt="" height=90px width=150px></a>
+        <div class="sign">
+            {% if request.user.is_authenticated %}
+            <a href="{% url 'update' %}"><img src='{{user.avatar.url}}'></a>
+            {% else %}
+            <a href="{% url 'register' %}">Register/Login</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div id="menu">
+        <ul><div class="overlay">
+                <div class="text">Head</div>
+            </div>
+            <li><a href="/face"><img src="/media/assets/head.png" height="90px" width="130px"></a></li>
+            <div class="overlay">
+                <div class="text">Upperbody</div>
+            </div>
+            <li><a href="/up_body"><img src="/media/assets/upbody.png" height="90px" width="130px"></a></li>
+            <div class="overlay">
+                <div class="text">Lowerbody</div>
+            </div>
+            <li><a href="/low_body"><img src="/media/assets/lowbody.png" height="175px" width="125px"></a></li>
+            <div class="overlay">
+                <div class="text">Blood</div>
+            </div>
+            <li><a href="/blood"><img src="/media/assets/icons8-pharmacy-64-removebg-preview.png" height="100px" width="100px"></a></li>
+        </ul>
+    </div>
+</div>
