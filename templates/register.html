@@ -11,6 +11,8 @@
         {% csrf_token %} 
         <label>Username:</label>
         {{form.username}} <br>
+        <label>Email:</label>
+        <input type='email' name='email' placeholder='email' />
         <label>Password:</label>
         {{form.password1}} <br>
         <label>Confirm Your Password:</label>
