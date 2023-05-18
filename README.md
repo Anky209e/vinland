@@ -46,6 +46,5 @@ Theme: HealthCare
     - github.com/krrishexe Krish Yadav -8209
     - github.com/Gaurav065 Gaurav Patel-8208
     - github.com/swaksh-war SwakshWar Ghosh-8207
-    - github.com/prakriti-01 Prakriti Verma-8206
 
 ```
